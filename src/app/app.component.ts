@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('commited');
     // this.Bot({
     //   directLine: 
     //   {
