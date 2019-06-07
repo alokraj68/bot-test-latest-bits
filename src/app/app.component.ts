@@ -14,16 +14,24 @@ export class AppComponent implements OnInit {
 
   @ViewChild('botWindow') botWindowElement: ElementRef;
 
-  ngOnInit(): void {
-    App({
-      directLine: {secret: 'secret goes here'},
-      user: {id: 'user'},
-      bot: {id: 'bot'},
-    }, this.botWindowElement.nativeElement)
+  constructor(
+    private Bot: App
+  ) {
+
   }
 
-  constructor() {
-
+  ngOnInit() {
+    this.Bot({
+      directLine: 
+      {secret: '68pkTD5fsD8.dAA.SABvAFMAVAB1AHoAOABhADcAZwBSAEsAVgBwAHkAVgBSAE8ARwBNADYAYQAtAG0A.bPGhKh8d1QE.CHgZx2TK8R4.Ga2DI2ZW-1rIrdP3Iv0TM65pqhw2FCCrXvbLPxyB43w'},
+      user: {
+        id: 'dl_0572e5c2-8bfc-433b-94b7-6875c2fdaff0',
+        name: 'jameson'
+      },
+      bot: {
+        id: 'bot'
+      },
+    }, this.botWindowElement.nativeElement)
   }
  
 }
